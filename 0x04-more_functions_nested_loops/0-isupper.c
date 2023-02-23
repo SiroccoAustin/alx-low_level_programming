@@ -5,15 +5,16 @@
 # include <ctype.h>
 
 /**
- * main - check the code.
+ * _isupper - check if character is uppercase
  *
- * Return: Always 0.
+ * Return: one if uppper case and zero if not uppercase
  */
-
-int main(void)
+int _isuppper(int c)
 {
-	char c;
-	c = 'A';
-	check_upppercase(c);
-	return (0);
+	if((c >= 'A') && (c <= 'Z')){
+		return (1);
+	}
+	else{
+		return (0);
+	}
 }
