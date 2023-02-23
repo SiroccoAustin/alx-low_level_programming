@@ -1,8 +1,4 @@
-# include <stdio.h>
-
 # include "main.h"
-
-# include <ctype.h>
 
 /**
  * _isupper - check if character is uppercase
