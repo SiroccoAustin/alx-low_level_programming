@@ -1,5 +1,5 @@
 # include <stdio.h>
-
+# include "main.h"
 /**
  * main - check the code.
  *
@@ -9,11 +9,6 @@ int main(void)
 {
 	char c;
 	scanf("%c", &c);
-	if(c == _isupper(c)){
-		return (1);
-	}
-	else{
-		return (0);
-	}
+	check_upper(c);
 	return (0);
 }
