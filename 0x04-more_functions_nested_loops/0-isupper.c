@@ -9,6 +9,7 @@ int main(void)
 {
 	char c;
 	scanf("%c", &c);
+
 	check_upper(c);
 	return (0);
 }
