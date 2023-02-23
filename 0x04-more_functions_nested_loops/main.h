@@ -1,5 +1,6 @@
 #ifndef HEADER_H
 #define HEADER_H
+# include <ctype>
 
 int check_uppercase(char c)
 {
