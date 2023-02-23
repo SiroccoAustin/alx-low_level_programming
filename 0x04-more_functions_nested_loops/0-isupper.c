@@ -13,6 +13,7 @@
 int main(void)
 {
 	char c;
+	c = 'A';
 	check_upppercase(c);
 	return (0);
 }
