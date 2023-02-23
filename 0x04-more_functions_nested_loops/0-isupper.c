@@ -8,13 +8,12 @@
  * Return: Always 0.
  */
 
-int main(void)
+int _isupper(int c)
 {
-	char c;
-
-	c = 'A';
-
-	check_upper(c);
-
-	return (0);
+	if((c >= 'A') && (c <= 'Z')){
+		return (1);
+	}
+	else{
+		return (0);
+	}
 }
