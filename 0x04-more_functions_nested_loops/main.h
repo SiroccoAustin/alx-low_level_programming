@@ -3,7 +3,7 @@
 
 int check_upper(c)
 {
-	if(c == isupper(c)){
+	if(isupper(c)){
 		return (1);
 
 	}
