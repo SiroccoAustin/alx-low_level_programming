@@ -12,7 +12,7 @@ int main(void)
 {
 	char c;
 
-	scanf("%c", &c);
+	c = 'A';
 
 	check_upper(c);
 
