@@ -2,18 +2,18 @@
 
 # include "main.h"
 
+# include <ctype.h>
+
 /**
  * main - check the code.
  *
  * Return: Always 0.
  */
 
-int _isupper(int c)
+int main(void)
 {
-	if((c >= 'A') && (c <= 'Z')){
-		return (1);
-	}
-	else{
-		return (0);
-	}
+	char c;
+	scanf("%c", &c);
+	check_upppercase(c);
+	return (0);
 }
