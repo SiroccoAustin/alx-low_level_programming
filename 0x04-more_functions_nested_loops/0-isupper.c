@@ -13,7 +13,6 @@
 int main(void)
 {
 	char c;
-	scanf("%c", &c);
 	check_upppercase(c);
 	return (0);
 }
