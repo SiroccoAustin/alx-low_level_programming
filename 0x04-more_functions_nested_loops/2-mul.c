@@ -1,7 +1,14 @@
 #include "main.h"
 
-/* mul fuction that return mult if 2 intgers*/
-int mul(int x, int y)
+/**
+ * mul - Multiply two numbers
+ * @a: first integer
+ * @b: second integer
+ * Return: the result of two numbers
+ */
+
+int mul(int a, int b)
 {
-	return ( x * y)
+
+	return (a * b);
 }
