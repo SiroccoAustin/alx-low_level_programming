@@ -9,6 +9,6 @@
 
 void _puts(char *str)
 {
-	printf("%s", str);
-	_putchar('\n');
+	puts(str);
+	puts('\n');
 }
