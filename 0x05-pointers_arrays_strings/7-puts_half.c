@@ -25,4 +25,5 @@ void puts_half(char *str)
 	second[j - index] = str[j];
 	}
 	puts(second);
+	}
 }
