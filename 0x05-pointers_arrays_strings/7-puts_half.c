@@ -23,7 +23,8 @@ void puts_half(char *str)
 	while (j < length)
 	{
 	second[j - index] = str[j];
+	j++;
+	}
 	}
 	puts(second);
-	}
 }
