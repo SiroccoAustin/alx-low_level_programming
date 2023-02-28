@@ -10,5 +10,16 @@
 
 void puts2(char *str)
 {
-	puts(str);
+	int length = strlen(str);
+
+	int i = 0;
+
+	while (i < length)
+	{
+	if (str[i])
+	{
+	continue;
+	puts(str[i]);
+	}
+	}
 }
