@@ -13,23 +13,12 @@ void puts_half(char *str)
 
 	int length = strlen(str);
 
-	char first[100];
-
 	char second[100];
-
-	int i = 0;
 
 	int j = index;
 
 	if (index < length)
 	{
-	while (i < index)
-	{
-	first = str[i];
-	i++;
-	}
-	first[index] = '\0';
-	}
 	while (j < length)
 	{
 	second[j - index] = str[j];
