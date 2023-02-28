@@ -16,10 +16,7 @@ void puts2(char *str)
 
 	while (i < length)
 	{
-	if (str[i])
-	{
-	continue;
-	puts(str);
-	}
+	_putchar(str);
+	i+=2;
 	}
 }
