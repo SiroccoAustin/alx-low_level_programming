@@ -15,7 +15,9 @@ void reverse_array(int *a, int n)
 
 	int temp = 0;
 
-	while (i < n)
+	int midpoint = n / 2
+
+	while (i < midpoint)
 	{
 	temp = a[i];
 	a[i] = a[n - i - 1];
