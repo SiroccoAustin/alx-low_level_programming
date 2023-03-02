@@ -12,9 +12,9 @@ char *string_toupper(char *str)
 {
 	int i = 0;
 
-	int length = strlen(str);
+	/*int length = strlen(str);*/
 
-	while (i < length)
+	while (str[i])
 	{
 	if (str[i] >= 'a' && str[i] <= 'z')
 	{
