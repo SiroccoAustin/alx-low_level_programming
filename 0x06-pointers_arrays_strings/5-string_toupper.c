@@ -4,20 +4,21 @@
 
 /**
  * string_toupper - output upppercase characters
- * @temp: temporary argument
+ * @str: string to convert to uppercase
  * Return: uppercase characters
  */
 
-char *string_toupper(char *temp)
+char *string_toupper(char *str)
 {
 	int i = 0; 
 
-	while (temp[i])
+	while (str[i])
 	{
-	if (temp[i] >= 'a' && temp[i] <= 'z')
+	if (str[i] >= 'a' && str[i] <= 'z')
 	{
-	temp[i] = temp[i] - 32;
+	str[i] = str[i] - 32;
 	i++;
 	}
 	}
+	return (str);
 }
