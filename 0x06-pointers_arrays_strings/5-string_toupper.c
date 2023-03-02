@@ -4,17 +4,19 @@
 
 /**
  * string_toupper - output upppercase characters
+ * of a string provided
  * @str: string to convert to uppercase
  * Return: uppercase characters
+ *
  */
 
 char *string_toupper(char *str)
 {
 	int i = 0;
 
-	/*int length = strlen(str);*/
+	int length = strlen(str);
 
-	while (str[i])
+	while (i < length)
 	{
 	if (str[i] >= 'a' && str[i] <= 'z')
 	{
