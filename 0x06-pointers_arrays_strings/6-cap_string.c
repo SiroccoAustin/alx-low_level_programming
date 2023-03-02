@@ -10,11 +10,11 @@
 
 char *cap_string(char *str)
 {
-	int i = 0;
+	int i;
 
 	int length = strlen(str);
 
-	while (i < length)
+	for (i = 0; i < length; i++)
 	{
 	if (i == 0)
 	{
@@ -40,6 +40,5 @@ char *cap_string(char *str)
 	str[i] += 32;
 	}
 	}
-	++i;
 	}
 }
