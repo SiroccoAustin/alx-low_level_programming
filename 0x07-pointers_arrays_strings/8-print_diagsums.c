@@ -17,16 +17,10 @@ void print_diagsums(int *a, int size)
 	{
 	for (j = 0; j < size; j++)
 	{
-	if (i == j)
-	{
-	sum += a[j];
-	}
-	if (i + j == size - 1)
-	{
-	backsum += a[j];
-	}
+	(i == j)? sum += a[j] : 0;
+	(i + j == size - 1)? backsum += a[j] : 0;
 	}
 	i++;
 	}
-	printf("%i, %i\n", sum, backsum);
+	printf("%d, %d\n", sum, backsum);
 }
