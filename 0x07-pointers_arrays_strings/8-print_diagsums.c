@@ -10,15 +10,23 @@
 
 void print_diagsums(int *a, int size)
 {
-	int matrix[size][size] = a;
 
-	int i = 0, backsum = 0, sum = 0;
+	int i = 0, j, backsum = 0, sum = 0;
 
 	while (i < size)
 	{
-	sum += matrix[i][i];
-	backsum += matrix[i][size - i - 1];
+	for (j = 0; j < size; j++)
+	{
+	if (i == j)
+	{
+	sum += a[j];
+	}
+	if (i + j == size - 1)
+	{
+	backsum += a[j];
+	}
+	}
 	i++;
 	}
-	printf("%d, %d", sum, backsum);
+	printf("%i, %i\n", sum, backsum);
 }
