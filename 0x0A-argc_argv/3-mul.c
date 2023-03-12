@@ -22,10 +22,8 @@ int main(int argc, char *argv[])
 	{
 	for (i = 1; i < argc; i++)
 	{
-	printf("%s\n", argv[i]);
 	mul *= atoi(argv[i]);
 	}
-	printf("This is the result %d\n", mul);
 	}
 	return (0);
 }
