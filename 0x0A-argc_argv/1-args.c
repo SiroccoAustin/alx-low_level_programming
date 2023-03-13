@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	{
 	if (isalpha(*(argv[i])))
 	{
-	printf("Error\n");
+	count++;
 	}
 	else
 	{
