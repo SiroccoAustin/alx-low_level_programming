@@ -8,7 +8,7 @@
  * Return: always return 0
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int count;
 
@@ -18,8 +18,13 @@ int main(int argc, char* argv[])
 	}
 	if (argc > 1)
 	{
-	for (int i = 1; i < argc; i++)
+	int i = 1;
+
+	while (i < argc)
+	{
 	count++;
+	i++;
+	}
 	}
 	printf("%d\n", count);
 	return (0);
