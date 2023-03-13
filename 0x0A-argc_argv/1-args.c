@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * main - prints number of arguments
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 	if (argc > 1)
 	{
 	int i = 1;
-
+	
 	while (i < argc)
 	{
 	count++;
