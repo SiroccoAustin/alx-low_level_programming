@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	count++;
 	i++;
 	}
-	}
 	printf("%d\n", count);
+	}
 	return (0);
 }
