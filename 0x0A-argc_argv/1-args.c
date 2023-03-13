@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 /**
  * main - prints number of arguments
@@ -23,7 +24,14 @@ int main(int argc, char *argv[])
 	
 	while (i < argc)
 	{
+	if (isalpha(*(argv[i])))
+	{
+	printf("Error\n");
+	}
+	else
+	{
 	count++;
+	}
 	i++;
 	}
 	printf("%d\n", count);
