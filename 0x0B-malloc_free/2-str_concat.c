@@ -22,22 +22,22 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (concat != NULL)
 	{
-	if (s1 == NULL)
+	if (*s1 == NULL)
 	{
-	s1 = " ";
+	*s1 = " ";
 	strcpy(concat, s1);
 	strcat(concat, s2);
 	}
-	else if (s2 == NULL)
+	else if (*s2 == NULL)
 	{
-	s2 = " ";
+	*s2 = " ";
 	strcpy(concat, s1);
 	strcat(concat, s2);
 	}
 	else if (s1 && s2 == NULL)
 	{
-	s1 = " ";
-	s2 = " ";
+	*s1 = " ";
+	*s2 = " ";
 	strcpy(concat, s1);
 	strcat(concat, s2);
 	}
