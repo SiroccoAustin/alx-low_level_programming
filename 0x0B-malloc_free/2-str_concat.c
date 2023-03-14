@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *concat;
 
-	concat = (char *)malloc(sizeof(char) * 4);
+	concat = (char *)malloc(sizeof(char) * 8);
 
 	if (concat == NULL)
 	{
