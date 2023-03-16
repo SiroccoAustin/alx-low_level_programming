@@ -22,13 +22,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= strlen(s2))
 	{
 	strcpy(ptr, s2);
-	/* create an algorithm that return the entire string*/
 	}
 	else
 	{
 	strcpy(ptr, s1);
 	strncat(ptr, s2, n);
-	/* write an algorithm that returns a concatenation of two strings*/
 	}
 	}
 	else
