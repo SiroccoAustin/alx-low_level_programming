@@ -24,14 +24,17 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 	return (NULL);
 	}
-	else
+	if (ptr != NULL)
 	{
 	while (i < size)
 	{
 	ptr[i] = 0;
 	i++;
 	}
+	else
+	{
+	return (NULL);
 	}
-
+	}
 	return (ptr);
 }
