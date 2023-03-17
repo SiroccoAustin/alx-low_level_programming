@@ -34,7 +34,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	else
 	{
-	return (NULL);
+	ptr = NULL;
 	}
 	return (ptr);
 }
