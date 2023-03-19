@@ -14,14 +14,15 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	
+
+	int length = strlen(s1) + strlen(s2);
+
+	ptr = malloc(sizeof(char) * length);
+
 	if (s1 == NULL)
 	{
 	s1 = "";
 	}
-	
-	int length = strlen(s1) + strlen(s2);
-	ptr = malloc(sizeof(char) * length);
 
 	if (ptr != NULL)
 	{
