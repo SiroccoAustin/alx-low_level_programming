@@ -15,37 +15,25 @@ char *str_concat(char *s1, char *s2)
 	char *concat;
 
 	concat = (char *)malloc(sizeof(char) * 12);
-
-	if (concat == NULL)
-	{
-	return (NULL);
-	}
-	if (concat != NULL)
-	{
+	
 	if (s1 == NULL)
 	{
-	s1 = " ";
-	strcpy(concat, s1);
-	strcat(concat, s2);
+	s1 = "";
 	}
 	if (s2 == NULL)
 	{
-	s2 = " ";
-	strcpy(concat, s1);
-	strcat(concat, s2);
+	s2 = NULL;
 	}
-	if (s1 && s2 == NULL)
+
+	if (concat != NULL)
 	{
-	s1 = " ";
-	s2 = " ";
 	strcpy(concat, s1);
 	strcat(concat, s2);
 	}
 	else
 	{
-	strcpy(concat, s1);
-	strcat(concat, s2);
+	return(NULL);
 	}
-	}
+	
 	return (concat);
 }
