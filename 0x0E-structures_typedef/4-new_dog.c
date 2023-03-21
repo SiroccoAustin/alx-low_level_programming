@@ -15,10 +15,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *spot_dog;
 
-	if (name != NULL && owner != NULL)
-	{
 	int name_l = 0, owner_l = 0;
 
+	if (name != NULL && owner != NULL)
+	{
 	name_l = strlen(name) + 1;
 	owner_l = strlen(owner) + 1;
 
