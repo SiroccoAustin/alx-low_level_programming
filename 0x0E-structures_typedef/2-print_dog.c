@@ -11,7 +11,11 @@ void print_dog(struct dog *d)
 {
 	if (d == NULL)
 	{
-	printf("Name:%d\n", 0);
+	printf("%d\n", 0);
+	}
+	if (d->name == NULL)
+	{
+	printf("Name:%d", 0);
 	}
 	else
 	{
