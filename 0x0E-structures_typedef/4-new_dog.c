@@ -22,7 +22,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	name_l = strlen(name) + 1;
 	owner_l = strlen(owner) + 1;
 
-	spot_dog = malloc(sizeof(char) * (name_l + owner_l));
+	spot_dog = malloc(sizeof(dog_t));
 
 	if (spot_dog == NULL)
 	{
