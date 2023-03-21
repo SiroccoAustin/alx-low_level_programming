@@ -19,8 +19,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 	int name_l = 0, owner_l = 0;
 
-	name_l = strlen(name);
-	owner_l = strlen(owner);
+	name_l = strlen(name) + 1;
+	owner_l = strlen(owner) + 1;
 
 	spot_dog = malloc(sizeof(char) * (name_l + owner_l));
 
