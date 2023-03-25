@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-	printf("ERROR\n");
+	printf("Error\n");
 	return (1);
 	}
 	if (argc > 1)
