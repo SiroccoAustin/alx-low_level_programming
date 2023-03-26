@@ -14,17 +14,13 @@
 int main(int argc, char *argv[])
 {
 	int i, sum;
-
-	if (isalpha(*(argv[1])))
+	
+	if (argc <= 2)
 	{
-	printf("Error\n");
+	printf("%d\n", 0);
 	return (0);
 	}
-	else if (argc <= 2)
-        {
-        printf("%d\n", 0);
-        return (0);
-        }
+	
 	if (argc > 2)
 	{
 	for (i = 1; i < argc; i++)
