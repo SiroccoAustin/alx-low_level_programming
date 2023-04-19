@@ -1,1 +1,0 @@
-fuction pointers readme file
