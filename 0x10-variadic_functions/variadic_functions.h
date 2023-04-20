@@ -1,5 +1,17 @@
 #ifndef VAR_H
 #define VAR_H
+#include <stdarg.h>
+
+/**
+ * struct func - struct
+ * @s: string
+ * @f: pointer to function
+ */
+typedef struct func
+{
+        char *s;
+        (*f)(va_list list);
+} func_t;
 
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
