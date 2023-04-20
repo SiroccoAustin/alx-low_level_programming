@@ -20,14 +20,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 	char *s = va_arg(ap, char *);
 	
-	if (s != NULL)
+	if (!s)
 	{
-	printf("%s", s);
+	printf("nil");
 	}
 	else
 	{
-	printf("nil");
-	break;
+	printf("%s", s);
 	}
 	if (i != n - 1 && separator != NULL)
 	{
@@ -35,4 +34,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	}
 	printf("\n");
+	va_end(ap);
 }
