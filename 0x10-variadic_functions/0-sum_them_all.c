@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-#include <stdio.h>
 
 /**
  * sum_them_all - outputs sum of elements
@@ -15,7 +14,7 @@ int sum_them_all(const unsigned int n, ...)
 
 	int sum = 0;
 
-	if (!n)
+	if (n == 0)
 	{
 	return (0);
 	}
