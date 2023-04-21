@@ -10,7 +10,7 @@
 typedef struct func
 {
         char *s;
-        (*f)(va_list list);
+	void (*f)(va_list list);
 } func_t;
 
 void print_numbers(const char *separator, const unsigned int n, ...);
