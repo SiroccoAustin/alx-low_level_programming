@@ -69,18 +69,22 @@ void print_all(const char * const format, ...)
 	va_list list;
 
 	int i = 0, j;
+	
+	char *separate = "";
 
 	va_start(list, format);
-	while (format && format[i])
+	while (format[i] != '\0')
 	{
 		j = 0;
 		while (array[j].s != NULL)
 		{
 			if (format[i] == *array[j].s)
 			{
+			printf("%s", separate);
 			array[i].f(list);
-			j++;
+			separate = ", ";
 			}
+			j++;
 		}
 		i++;
 	}
