@@ -12,6 +12,7 @@
 void print_char(va_list list)
 {
 	char c = va_arg(list, int);
+
 	printf("%c", c);
 }
 
@@ -24,7 +25,16 @@ void print_char(va_list list)
 void print_string(va_list list)
 {
 	char *s = va_arg(list, char *);
+
+	if (!s)
+	{
+	printf("nil");
+	return;
+	}
+	else
+	{
 	printf("%s", s);
+	}
 }
 
 /**
@@ -36,6 +46,7 @@ void print_string(va_list list)
 void print_int(va_list list)
 {
 	int i = va_arg(list, int);
+
 	printf("%d", i);
 }
 
@@ -48,6 +59,7 @@ void print_int(va_list list)
 void print_float(va_list list)
 {
 	double f = va_arg(list, double);
+
 	printf("%f", f);
 }
 
@@ -69,7 +81,7 @@ void print_all(const char * const format, ...)
 	va_list list;
 
 	int i = 0, j;
-	
+
 	char *separate = "";
 
 	va_start(list, format);
