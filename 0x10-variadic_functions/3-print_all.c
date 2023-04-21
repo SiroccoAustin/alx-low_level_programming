@@ -29,7 +29,6 @@ void print_string(va_list list)
 	if (!s)
 	{
 	printf("nil");
-	return;
 	}
 	else
 	{
