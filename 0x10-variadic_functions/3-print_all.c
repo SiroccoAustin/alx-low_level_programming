@@ -11,9 +11,7 @@
 
 void print_char(va_list list)
 {
-	char c = va_arg(list, int);
-
-	printf("%c", c);
+	printf("%c", va_arg(list, int));
 }
 
 /**
@@ -29,7 +27,6 @@ void print_string(va_list list)
 	if (!s)
 	{
 	printf("nil");
-	return;
 	}
 	printf("%s", s);
 }
@@ -42,9 +39,7 @@ void print_string(va_list list)
 
 void print_int(va_list list)
 {
-	int i = va_arg(list, int);
-
-	printf("%d", i);
+	printf("%d", va_arg(list, int));
 }
 
 /**
@@ -85,12 +80,12 @@ void print_all(const char * const format, ...)
 	while (format[i] != '\0')
 	{
 		j = 0;
-		while (array[j].s != NULL)
+		while (array[j].s)
 		{
 			if (format[i] == *array[j].s)
 			{
 			printf("%s", separate);
-			array[i].f(list);
+			array[j].f(list);
 			separate = ", ";
 			}
 			j++;
