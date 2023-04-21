@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stddef.h>
+#include <string.h>
 #include <stdarg.h>
 
 /**
@@ -27,6 +28,7 @@ void print_string(va_list list)
 	if (!s)
 	{
 	printf("nil");
+	return;
 	}
 	printf("%s", s);
 }
@@ -50,9 +52,7 @@ void print_int(va_list list)
 
 void print_float(va_list list)
 {
-	double f = va_arg(list, double);
-
-	printf("%f", f);
+	printf("%f", va_arg(list, double));
 }
 
 /**
