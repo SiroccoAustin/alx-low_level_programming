@@ -2,7 +2,7 @@
 /**
  * BeforeMain - execute func
  */
-void BeforeMain(void) __attribute__ ((constructor))
+void BeforeMain(void) __attribute__ ((constructor));
 
 void BeforeMain(void)
 {
