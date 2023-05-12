@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-  * placeholder2 - define function
+  * handlelf - define function
   * @void: describe argument
   * Return: 0 on success
   */
-int placeholder2(void)
+int handlelf(void)
 {
 	return (0);
 }
