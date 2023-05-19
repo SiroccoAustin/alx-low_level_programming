@@ -10,7 +10,7 @@ int main(int argc, char *av[])
 {
 	char *buffer[BUFSIZE];
 
-	int copy, file_to, file_from, wr, loop = 1;
+	int file_to, file_from, wr, loop = 1;
 
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -28,19 +28,18 @@ int main(int argc, char *av[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
-	while (loop != 2)
+	while (loop)
 	{
-		copy = read(file_from, buffer, BUFSIZE);
-		if (copy == -1)
+		loop = read(file_from, buffer, BUFSIZE);
+		if (loop == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		}
-		wr = write(file_to, buffer, BUFSIZE);
-		if (wr == -1)
+		wr = write(file_to, buffer, loop);
+		if (wr == -1 || wr != loop)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
-		loop++;
 	}
 	if (close(file_from) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
