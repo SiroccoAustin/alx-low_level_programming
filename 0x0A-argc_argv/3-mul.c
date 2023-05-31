@@ -12,7 +12,7 @@ int main(int ac, char *av[])
 {
 	int mul = 1, i = 1;
 
-	if (ac == 1)
+	if (ac <= 2)
 	{
 		printf("Error\n");
 		return (1);
