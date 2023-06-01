@@ -11,7 +11,7 @@
 
 int main(int ac, char *av[])
 {
-	int result = 0, i = 1;
+	int result = 0, i = 1, j, length = 0, l = 1;
 
 	if (ac == 1)
 	{
@@ -22,16 +22,24 @@ int main(int ac, char *av[])
 	{
 		while (av[i])
 		{
-			if (*(av[i]) >= '0' && *(av[i]) <= '9')
+			for (j = 0; av[i][j]; j++)
 			{
-				result += atoi(av[i]);
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
+				if (av[i][j] >= '0' && av[i][j] <= '9')
+				{
+					length++;
+				}
+				else
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 			i++;
+		}
+		while (av[l])
+		{
+			result += atoi(av[l]);
+			l++;
 		}
 	}
 	printf("%d\n", result);
