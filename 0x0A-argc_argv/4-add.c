@@ -22,7 +22,7 @@ int main(int ac, char *av[])
 	{
 		while (av[i])
 		{
-			if (isalpha(*(av[i])))
+			if (isalpha(*(av[i])) || atoi(av[i]) < 0)
 			{
 				printf("Error\n");
 				return (1);
