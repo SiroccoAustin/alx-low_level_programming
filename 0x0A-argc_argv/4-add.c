@@ -29,6 +29,7 @@ int main(int ac, char *av[])
 			}
 			if (atoi(av[i]) < 0)
 			{
+				i++;
 				continue;
 			}
 			result += atoi(av[i]);
