@@ -22,15 +22,16 @@ int main(int ac, char *av[])
 	{
 		while (av[i])
 		{
-			if (isalpha(*(av[i])) || atoi(av[i]) < 0)
+			if (isalpha(*(av[i])))
 			{
 				printf("Error\n");
 				return (1);
 			}
-			else
+			if (atoi(av[i]) < 0)
 			{
-				result += atoi(av[i]);
+				continue;
 			}
+			result += atoi(av[i]);
 			i++;
 		}
 	}
