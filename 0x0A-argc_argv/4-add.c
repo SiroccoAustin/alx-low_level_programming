@@ -22,17 +22,15 @@ int main(int ac, char *av[])
 	{
 		while (av[i])
 		{
-			if (isalpha(*(av[i])))
+			if (*(av[i]) >= '0' && *(av[i]) <= '9')
+			{
+				result += atoi(av[i]);
+			}
+			else
 			{
 				printf("Error\n");
 				return (1);
 			}
-			if (atoi(av[i]) < 0)
-			{
-				i++;
-				continue;
-			}
-			result += atoi(av[i]);
 			i++;
 		}
 	}
