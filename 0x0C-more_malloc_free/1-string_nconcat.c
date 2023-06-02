@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		i++;
 	}
-	if (n >= length)
+	if (n >= length && length != 0)
 	{
 		strcpy(ptr, arr[1]);
 		return (ptr);
