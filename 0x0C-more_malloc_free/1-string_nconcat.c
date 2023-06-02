@@ -12,7 +12,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int i = 0;
 
-	unsigned int length = strlen(s2);
+	unsigned int length;
 
 	char *arr[2];
 
@@ -31,8 +31,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		i++;
 	}
-	if (n >= length && length != 0)
-	{
+	length = strlen(arr[1]);
+	if (n >= length && length != 0) {
 		strcpy(ptr, arr[1]);
 		return (ptr);
 	}
