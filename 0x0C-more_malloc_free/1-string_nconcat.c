@@ -14,9 +14,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	unsigned int length, len1 = 0;
 
-	char *arr[2];
-
-	char *ptr;
+	char *arr[2], *ptr;
 
 	ptr = malloc(sizeof(char *) + n);
 
