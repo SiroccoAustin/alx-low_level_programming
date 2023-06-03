@@ -22,9 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	arr[1] = s2;
 
 	if (ptr == NULL)
-	{
 		return (NULL);
-	}
 
 	while (i < 2)
 	{
@@ -38,8 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= length && length != 0)
 	{
 		strcpy(ptr, arr[1]);
-		len2 = strlen(ptr);
-		ptr[len2] = '\0';
+		ptr[length] = '\0';
 		return (ptr);
 	}
 	strcpy(ptr, arr[0]);
