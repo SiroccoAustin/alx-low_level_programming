@@ -41,12 +41,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[length] = '\0';
 		return (ptr);
 	}
-	else
-	{
-		strcpy(ptr, arr[0]);
-		strncat(ptr, arr[1], n);
-		len1 = strlen(ptr);
-	}
+	strcpy(ptr, arr[0]);
+	strncat(ptr, arr[1], n);
+	len1 = strlen(ptr);
 	ptr[len1] = '\0';
 	return (ptr);
 }
