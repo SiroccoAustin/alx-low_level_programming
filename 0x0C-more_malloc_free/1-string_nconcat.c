@@ -23,6 +23,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	arr[0] = s1;
 	arr[1] = s2;
 
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+
 	while (i < 2)
 	{
 		if (arr[i] == NULL)
