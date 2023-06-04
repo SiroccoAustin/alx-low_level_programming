@@ -25,11 +25,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	while (i < nmemb)
-	{
-		t[i] = 0;
-		i++;
-	}
-	ptr = t;
-	return (ptr);
+	memset(t, 0, size);
+	return (t);
 }
