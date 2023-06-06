@@ -9,13 +9,11 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	/*unsigned int i = 0;*/
+	unsigned int len = size * nmemb;
 
 	void *t;
 
-	/*void *ptr;*/
-
-	t = malloc(size * nmemb);
+	t = malloc(len);
 
 	if (t == NULL)
 	{
@@ -25,6 +23,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	memset((char *)(t), 0, (nmemb * size));
+	memset((char *)(t), 0, len);
 	return (t);
 }
