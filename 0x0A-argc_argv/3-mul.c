@@ -17,7 +17,7 @@ int main(int ac, char *av[])
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	while (av[i])
 	{
 		mul *= atoi(av[i]);
