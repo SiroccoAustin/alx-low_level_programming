@@ -9,6 +9,7 @@
 
 int main(int ac, char *av[])
 {
-	printf("%s\n", av[0]);
-	return (ac);
+	if (ac == 1)
+		printf("%s\n", av[0]);
+	return (0);
 }
