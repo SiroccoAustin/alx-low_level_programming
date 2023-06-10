@@ -14,7 +14,7 @@ int main(int ac, char *av[])
 	if (ac == 1)
 	{
 		printf("%d\n", 0);
-		return (1);
+		return (0);
 	}
 
 	while (av[i])
