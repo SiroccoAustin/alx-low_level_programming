@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[z] = arr[0][z];
 		z++;
 	}
-	while (j <= n)
+	while (j < n)
 	{
 		ptr[len1] = arr[1][j];
 		len1++;
