@@ -10,7 +10,7 @@
 int main(int ac, char *av[])
 {
 	int num1, num2, result;
-	
+
 	int (*f)(int, int);
 
 	if (ac < 4)
