@@ -18,7 +18,9 @@ unsigned int binary_to_uint(const char *b)
 		result *= 2;
 
 		if (isalpha(b[i]) != 0)
+		{
 			return (0);
+		}
 		else
 			result += b[i] == '1' ? 1 : 0;
 		i++;
