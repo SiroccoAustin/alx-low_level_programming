@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * read_textfile - reads and writes contents of the file
@@ -13,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	ssize_t readc, writec;
 
-	char buf[1024];
+	char *buf = malloc(letters);
 
 	if (!filename)
 		return (0);
