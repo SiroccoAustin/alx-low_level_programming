@@ -12,7 +12,7 @@ char *checker(char *arr, unsigned int len)
 	unsigned int i = 0;
 	char *ptr;
 
-	ptr = malloc(sizeof(char *) * (len + 1));
+	ptr = malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);
 	while (arr[i])
@@ -20,6 +20,7 @@ char *checker(char *arr, unsigned int len)
 		ptr[i] = arr[i];
 		i++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }
 
@@ -51,7 +52,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len2++;
 	if (n >= len2 && len2 != 0)
 	{
-		ptr = malloc(sizeof(char *) * (n + 1));
+		ptr = malloc(sizeof(char) * (len2 + 1));
 		if (ptr == NULL)
 			return (NULL);
 		while (arr[1][w])
@@ -59,9 +60,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			ptr[w] = arr[1][w];
 			w++;
 		}
+		ptr[w] = '\0';
 		return (ptr);
 	}
-	ptr = malloc(sizeof(char *) * (len1 + n));
+	ptr = malloc(sizeof(char) * (len1 + n + 1));
 	if (ptr == NULL)
 		return (NULL);
 	ptr = checker(arr[0], len1);
