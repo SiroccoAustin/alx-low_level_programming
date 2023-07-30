@@ -1,30 +1,6 @@
 #include "main.h"
 
 /**
- * checker - copy string one
- * @arr: string to copy
- * @len: number of elements
- * Return: a copy of a string
- */
-
-char *checker(char *arr, unsigned int len)
-{
-	unsigned int i = 0;
-	char *ptr;
-
-	ptr = malloc(sizeof(char) * (len + 1));
-	if (ptr == NULL)
-		return (NULL);
-	while (arr[i])
-	{
-		ptr[i] = arr[i];
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
-}
-
-/**
  * string_nconcat - concatenate strings
  * @s1: first string
  * @s2: second string
@@ -34,18 +10,12 @@ char *checker(char *arr, unsigned int len)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, len1 = 0, len2 = 0, w = 0, j = 0;
+	unsigned int i = 0, len1 = 0, len2 = 0, w = 0, j = 0, z = 0;
 	char *ptr, *arr[2];
 
-	arr[0] = s1;
-	arr[1] = s2;
+	arr[0] = (s1 != NULL) ? s1 : "";
+	arr[1] = (s2 != NULL) ? s2 : "";
 
-	while (i < 2)
-	{
-		if (arr[i] == NULL)
-			arr[i] = "";
-		i++;
-	}
 	while (arr[0][len1])
 		len1++;
 	while (arr[1][len2])
@@ -66,13 +36,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(sizeof(char) * (len1 + n + 1));
 	if (ptr == NULL)
 		return (NULL);
-	ptr = checker(arr[0], len1);
-	while (j < n)
+	while (arr[0][i])
 	{
-		ptr[len1] = arr[1][j];
-		len1++;
+		ptr[i] = arr[0][i];
+		i++;
+	}
+
+	while (j < n && arr[1][j] != '\0')
+	{
+		ptr[len1 + j] = arr[1][j];
 		j++;
 	}
-	ptr[len1] = '\0';
+	ptr[len1 + j] = '\0';
 	return (ptr);
 }
