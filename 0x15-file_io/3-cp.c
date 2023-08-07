@@ -13,7 +13,8 @@ int main (int ac, char *av[])
 	int file_to, file_from;
 	ssize_t rd, wd;
 	char buf[BUFFER];
-	if (ac < 3)
+
+	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
@@ -30,8 +31,8 @@ int main (int ac, char *av[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]);
 		exit(98);
 	}
-	rd = 1024;
-	while (rd == 1024)
+
+	while ((rd = read(file_from, buf, BUFFER)) > 0)
 	{
 		rd = read(file_from, buf, BUFFER);
 		if (rd == -1)
