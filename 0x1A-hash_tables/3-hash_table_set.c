@@ -18,8 +18,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (newNode == NULL)
 		return (0);
 	newNode->key = strdup(key);
+	if (newNode->key == NULL) 
+	{
+		free(newNode);
+		return (0);
+	}
 	newNode->value = strdup(value);
+	if (newNode->value == NULL) 
+	{
+		free(newNode->key);
+		free(newNode);
+		return (0);
+	}
 	newNode->next = NULL;
+
 	if (ht[index] == NULL)
 	{
 		ht[index] = newNode;
