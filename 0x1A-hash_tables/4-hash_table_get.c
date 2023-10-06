@@ -11,6 +11,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 
+	char *value;
+
 	if (ht == NULL || ht->size == 0 || key == NULL || *key == 0)
 		return (NULL);
 	hash_node_t *ptr = ht->array[index];
@@ -22,6 +24,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	}
 	if (ptr == NULL)
 		return (NULL);
-
+	value = strdup(ptr->value);
+	if (value == NULL)
+		return (NULL);
 	return (strdup(ptr->value));
 }
