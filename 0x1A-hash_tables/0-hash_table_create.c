@@ -26,7 +26,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	while (index < size)
 	{
-		ptr[index] = NULL;
+		ptr->array[index] = NULL;
 		index++;
 	}
 	return (ptr);
