@@ -12,6 +12,9 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t left = 0, right = size - 1, i, j;
 
+	if (!array)
+		return (-1);
+
 	for (i = 0; left <= right; i++)
 	{
 		int mid = (right + left) / 2;
